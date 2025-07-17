@@ -9,9 +9,20 @@
   <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
   <link rel="stylesheet" type="text/css" href="normalize.css">
   <link rel="stylesheet" type="text/css" href="default.css">
+
+  <style>
+    .fade-in {
+      opacity: 0;
+      transition: opacity 0.6s ease-in;
+    }
+
+    .fade-in.loaded {
+      opacity: 1;
+    }
+  </style>
 </head>
 
-<body style="background-color: #fdf6e3;">
+<body class="fade-in" style="background-color: #fdf6e3;">
 
   <section class="content">
 
@@ -77,5 +88,11 @@
     Last updated: July 2025
   </section>
 
+  <script>
+    window.addEventListener('DOMContentLoaded', () => {
+      document.body.classList.add('loaded');
+    });
+  </script>
 </body>
+
 </html>

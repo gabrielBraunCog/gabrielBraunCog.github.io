@@ -1,63 +1,81 @@
 <!DOCTYPE html>
 <html lang="en">
 
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gabriel Braun - Home </title>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" type="text/css" href="normalize.css">
-    <link rel="stylesheet" type="text/css" href="default.css">
-    <meta name="google-site-verification" content="p7xctf7SRFzqorqnDCDFKaPoc167YPvxxG_qPEMldR8" />
-  </head>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gabriel Braun - Home</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" type="text/css" href="normalize.css">
+  <link rel="stylesheet" type="text/css" href="default.css">
+  <meta name="google-site-verification" content="p7xctf7SRFzqorqnDCDFKaPoc167YPvxxG_qPEMldR8" />
 
-  <body>
+  <style>
+    .fade-in {
+      opacity: 0;
+      transition: opacity 0.6s ease-in;
+    }
 
-    <section class="content">
+    .fade-in.loaded {
+      opacity: 1;
+    }
+  </style>
+</head>
 
-      <section class="banner">
-          <h1> <a href="index.html">Gabriel Braun</a> </h1>
-      </section>
+<body class="fade-in">
 
-      <section class="nav">
-        <!-- Navigation -->
-        <nav>
-          <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="research.html">Research</a></li>
-            <li><a href="PDF/CV_2025_Gabriel_Braun.pdf" target="_blank">CV</a></li>
-          </ul>
-        </nav>
-      </section>
+  <section class="content">
 
-      <div class="details">
-        
-        <section class="left-image">
-         <img src="IMG/gabriel.jpg" alt=".">
-        </section>
-
-        <section class="text">
-          <p> I'm a PhD candidate in the Sagol School of Neuroscience at Tel Aviv University, advised by Prof. Yaara Yeshurun and Prof. Einat Shetreet. </p>
-
-          <p> My research focuses on the cognitive and neural mechanisms of belief, truth, and misinformation. I use behavioral experiments and fMRI to understand how people process (un)reliable information and how they evaluate trust in sources. </p>
-
-          <p> I am currently looking for postdoctoral opportunities. </p>
-
-          <p><b>Programming experience:</b> Python | MATLAB | R <br>
-          <b>General Tools:</b> fMRI analysis (FSL, SPM, ISC) | Machine Learning (e.g., scikit-learn, pytorch) | Experiment building (e.g., PsychoPy, Psychotoolbox) <br>
-                    </p>
-
-          <p> <b>Contact:</b> gabrielbraun@mail.tau.ac.il </p>
-        </section>
-
-      </div>
-
+    <section class="banner">
+      <h1><a href="index.html">Gabriel Braun</a></h1>
     </section>
 
-    <section class="footer">
-          Last updated: July 2025
+    <section class="nav">
+      <!-- Navigation -->
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="research.html">Research</a></li>
+          <li><a href="PDF/CV_2025_Gabriel_Braun.pdf" target="_blank">CV</a></li>
+        </ul>
+      </nav>
     </section>
 
-  </body>
+    <div class="details">
+
+      <section class="left-image">
+        <img src="IMG/gabriel.jpg" alt=".">
+      </section>
+
+      <section class="text">
+        <p>I'm a PhD candidate in the Sagol School of Neuroscience at Tel Aviv University, advised by Prof. Yaara Yeshurun and Prof. Einat Shetreet.</p>
+
+        <p>My research focuses on the cognitive and neural mechanisms of belief, truth, and misinformation. I use behavioral experiments and fMRI to understand how people process (un)reliable information and how they evaluate trust in sources.</p>
+
+        <p>I am currently looking for postdoctoral opportunities.</p>
+
+        <p><b>Programming experience:</b> Python | MATLAB | R <br>
+          <b>General Tools:</b> fMRI analysis (FSL, SPM, ISC) | Machine Learning (e.g., scikit-learn, pytorch) | Experiment building (e.g., PsychoPy, Psychotoolbox)
+        </p>
+
+        <p><b>Contact:</b> gabrielbraun@mail.tau.ac.il</p>
+      </section>
+
+    </div>
+
+  </section>
+
+  <section class="footer">
+    Last updated: July 2025
+  </section>
+
+  <script>
+    window.addEventListener('DOMContentLoaded', () => {
+      document.body.classList.add('loaded');
+    });
+  </script>
+
+</body>
+
 </html>
