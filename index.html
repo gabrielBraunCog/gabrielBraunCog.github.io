@@ -12,6 +12,14 @@
   <meta name="google-site-verification" content="p7xctf7SRFzqorqnDCDFKaPoc167YPvxxG_qPEMldR8" />
 
   <style>
+    body {
+      visibility: hidden;
+    }
+
+    body.ready {
+      visibility: visible;
+    }
+
     .fade-in {
       opacity: 0;
       transition: opacity 0.6s ease-in-out;
@@ -77,7 +85,14 @@
   <script>
     window.addEventListener('DOMContentLoaded', () => {
       const body = document.body;
-      body.classList.add('loaded');
+
+      // Ensure page is only shown after initial fade-in setup
+      requestAnimationFrame(() => {
+        body.classList.add('ready'); // reveal page
+        requestAnimationFrame(() => {
+          body.classList.add('loaded'); // start fade-in
+        });
+      });
 
       // Intercept internal link clicks and add fade-out
       const links = document.querySelectorAll('a[href]');
@@ -94,7 +109,7 @@
 
             setTimeout(() => {
               window.location.href = href;
-            }, 600); // Match transition duration
+            }, 600); // Match the transition duration
           });
         }
       });
