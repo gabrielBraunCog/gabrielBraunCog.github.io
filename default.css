@@ -35,11 +35,12 @@ p {
 }
 
 .content {
-  width: 1000px;
+  width: 100%;
+  max-width: 1000px;
   margin: 0 auto;
   overflow: hidden;
-  padding-top: 30px;
-  padding-left: 100px;
+  padding: 30px 20px;
+  box-sizing: border-box;
 }
 
 .banner {
